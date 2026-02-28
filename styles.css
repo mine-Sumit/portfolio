@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #000;;
+    color: white;
+    min-height: 100vh;
+}
+
+.device-selection-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 160px 80px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+}
+
+.header {
+    align-self: stretch;
+    margin-bottom: 96px;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: white;
+    font-weight: normal;
+}
+
+.device-options {
+    display: flex;
+    gap: 208px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+}
+
+.device-option {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    transition: opacity 0.2s ease;
+}
+
+.device-option:hover {
+    opacity: 0.8;
+}
+
+/* Mine */
+/* .device-option:focus {
+    outline: 2px solid white;
+    outline-offset: 4px;
+} */
+
+.phone-option {
+    width: 150px;
+}
+
+.laptop-option {
+    width: 292px;
+}
+
+.device-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    color: white;
+    font-weight: normal;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-icon {
+    fill: white;
+    width: 138px;
+    height: 219px;
+}
+
+.laptop-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    width: 292px;
+    height: 208px;
+}
+
+/* Tablet styles */
+@media (max-width: 991px) {
+    .device-selection-container {
+        padding: 96px 40px;
+        max-width: 991px;
+    }
+
+    .header {
+        margin-bottom: 80px;
+    }
+
+    .main-title {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+
+    .device-options {
+        gap: 96px;
+    }
+
+    .device-title {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+    .device-selection-container {
+        padding: 64px 20px;
+        max-width: 640px;
+    }
+
+    .header {
+        margin-bottom: 64px;
+    }
+
+    .main-title {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    .device-options {
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .device-option {
+        width: 100% !important;
+    }
+
+    .phone-option {
+        max-width: 150px;
+    }
+
+    .laptop-option {
+        max-width: 292px;
+    }
+
+    .device-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
